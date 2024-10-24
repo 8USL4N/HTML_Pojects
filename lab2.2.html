@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="#393939" text="#CCCCCC">
+    <h1 align="center"><font face="system">Market Insights</font></h1>
+    <details>
+        <summary>График</summary>
+        <form>
+            <label>Значение по оси OX:</label><br>
+            <input type="radio" name="ox" value="type">Марка<br>
+            <input type="radio" name="ox" value="country">Модель<br>
+            <input type="radio" name="ox" value="year">Год<br><br>
+    
+            <label>Результат:</label><br>
+            <input type="checkbox" name="result" value="max_height">Максимальное количество продаж<br>
+            <input type="checkbox" name="result" value="min_height">Минимальное количество продаж<br>
+            <input type="checkbox" name="result" value="building_count">Количество моделей<br><br>
+    
+            <button type="button">Построить</button><br><br>
+            <div>Здесь будет график</div>
+        </form>
+    </details>
+    
+    <!-- Фильтр -->
+    <details>
+        <summary>Фильтр</summary>
+        <form>
+            <label>Название марки: <input type="text" name="name"></label><br><br>
+            <label>Модель марки: <input type="text" name="type"></label><br><br>
+            <label>Страна производителя: <input type="text" name="country"></label><br><br>
+            <label>Город: <input type="text" name="city"></label><br><br>
+            <label>Год: от <input type="text" name="year_from"> до <input type="text" name="year_to"></label><br><br>
+            <label>Кол-во продаж: от <input type="text" name="height_from"> до <input type="text" name="height_to"></label><br><br>
+            <button type="button">Найти</button>
+        </form>
+    </details>
+    
+    <!-- Сортировка -->
+    <details>
+        <summary>Сортировка</summary>
+        <form>
+            <label>Первый уровень:</label>
+            <select name="sort1">
+                <option value="none">Нет</option>
+                <option value="type">Тип</option>
+                <option value="country">Страна</option>
+                <option value="year">Год</option>
+            </select>
+            <label><input type="checkbox" name="desc1"> по убыванию?</label><br><br>
+    
+            <label>Второй уровень:</label>
+            <select name="sort2">
+                <option value="none">Нет</option>
+                <option value="type">Тип</option>
+                <option value="country">Страна</option>
+                <option value="year">Год</option>
+            </select>
+            <label><input type="checkbox" name="desc2"> по убыванию?</label><br><br>
+    
+            <label>Третий уровень:</label>
+            <select name="sort3">
+                <option value="none">Нет</option>
+                <option value="type">Тип</option>
+                <option value="country">Страна</option>
+                <option value="year">Год</option>
+            </select>
+            <label><input type="checkbox" name="desc3"> по убыванию?</label><br><br>
+    
+            <button type="button">Сортировать</button>
+        </form>
+    </details>
+    <table border="1" cellspacing="5" cellpadding="5">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Brand</th>
+                <th>Founded Year</th>
+                <th>Sales Volume (2022), thousand cars</th>
+                <th>Number of Models</th>
+                <th>Average Car Price (thousand €)</th>
+                <th>Number of Employees</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Mercedes</td><td>1926</td><td>2043</td><td>40</td><td>55</td><td>170,000</td></tr>
+            <tr><td>2</td><td>BMW</td><td>1916</td><td>2399</td><td>35</td><td>52</td><td>133,000</td></tr>
+            <tr><td>3</td><td>Audi</td><td>1909</td><td>1613</td><td>30</td><td>50</td><td>90,000</td></tr>
+            <tr><td>4</td><td>Mercedes</td><td>1926</td><td>2200</td><td>42</td><td>60</td><td>172,000</td></tr>
+            <tr><td>5</td><td>BMW</td><td>1916</td><td>2350</td><td>37</td><td>53</td><td>135,000</td></tr>
+            <tr><td>6</td><td>Audi</td><td>1909</td><td>1500</td><td>32</td><td>48</td><td>88,000</td></tr>
+            <tr><td>7</td><td>Mercedes</td><td>1926</td><td>2100</td><td>39</td><td>58</td><td>170,500</td></tr>
+            <tr><td>8</td><td>BMW</td><td>1916</td><td>2400</td><td>36</td><td>55</td><td>134,000</td></tr>
+            <tr><td>9</td><td>Audi</td><td>1909</td><td>1550</td><td>31</td><td>49</td><td>89,000</td></tr>
+            <tr><td>10</td><td>Mercedes</td><td>1926</td><td>2050</td><td>40</td><td>57</td><td>170,800</td></tr>
+            <tr><td>11</td><td>BMW</td><td>1916</td><td>2390</td><td>34</td><td>54</td><td>132,000</td></tr>
+            <tr><td>12</td><td>Audi</td><td>1909</td><td>1520</td><td>33</td><td>51</td><td>87,500</td></tr>
+            <tr><td>13</td><td>Mercedes</td><td>1926</td><td>2130</td><td>43</td><td>61</td><td>173,000</td></tr>
+            <tr><td>14</td><td>BMW</td><td>1916</td><td>2300</td><td>35</td><td>56</td><td>131,000</td></tr>
+            <tr><td>15</td><td>Audi</td><td>1909</td><td>1600</td><td>29</td><td>50</td><td>85,000</td></tr>
+            <tr><td>16</td><td>Mercedes</td><td>1926</td><td>2090</td><td>41</td><td>59</td><td>171,500</td></tr>
+            <tr><td>17</td><td>BMW</td><td>1916</td><td>2360</td><td>38</td><td>52</td><td>130,000</td></tr>
+            <tr><td>18</td><td>Audi</td><td>1909</td><td>1570</td><td>30</td><td>47</td><td>84,000</td></tr>
+            <tr><td>19</td><td>Mercedes</td><td>1926</td><td>2020</td><td>39</td><td>56</td><td>169,000</td></tr>
+            <tr><td>20</td><td>BMW</td><td>1916</td><td>2280</td><td>37</td><td>51</td><td>129,000</td></tr>
+            <tr><td>21</td><td>Audi</td><td>1909</td><td>1550</td><td>32</td><td>50</td><td>83,000</td></tr>
+            <tr><td>22</td><td>Mercedes</td><td>1926</td><td>2150</td><td>42</td><td>62</td><td>175,000</td></tr>
+            <tr><td>23</td><td>BMW</td><td>1916</td><td>2370</td><td>36</td><td>53</td><td>132,500</td></tr>
+            <tr><td>24</td><td>Audi</td><td>1909</td><td>1580</td><td>31</td><td>48</td><td>88,000</td></tr>
+            <tr><td>25</td><td>Mercedes</td><td>1926</td><td>2080</td><td>40</td><td>58</td><td>174,000</td></tr>
+            <tr><td>26</td><td>BMW</td><td>1916</td><td>2340</td><td>39</td><td>54</td><td>133,000</td></tr>
+            <tr><td>27</td><td>Audi</td><td>1909</td><td>1560</td><td>30</td><td>47</td><td>86,000</td></tr>
+            <tr><td>28</td><td>Mercedes</td><td>1926</td><td>2110</td><td>41</td><td>59</td><td>176,000</td></tr>
+            <tr><td>29</td><td>BMW</td><td>1916</td><td>2300</td><td>37</td><td>52</td><td>131,000</td></tr>
+            <tr><td>30</td><td>Audi</td><td>1909</td><td>1590</td><td>28</td><td>46</td><td>84,500</td></tr>
+            <tr><td>31</td><td>Mercedes</td><td>1926</td><td>2060</td><td>40</td><td>55</td><td>173,000</td></tr>
+            <tr><td>32</td><td>BMW</td><td>1916</td><td>2390</td><td>35</td><td>57</td><td>134,500</td></tr>
+            <tr><td>33</td><td>Audi</td><td>1909</td><td>1620</td><td>33</td><td>51</td><td>89,000</td></tr>
+            <tr><td>34</td><td>Mercedes</td><td>1926</td><td>2140</td><td>43</td><td>61</td><td>175,000</td></tr>
+            <tr><td>35</td><td>BMW</td><td>1916</td><td>2360</td><td>36</td><td>54</td><td>133,500</td></tr>
+            <tr><td>36</td><td>Audi</td><td>1909</td><td>1600</td><td>31</td><td>49</td><td>85,500</td></tr>
+            <tr><td>37</td><td>Mercedes</td><td>1926</td><td>2090</td><td>42</td><td>60</td><td>174,000</td></tr>
+            <tr><td>38</td><td>BMW</td><td>1916</td><td>2300</td><td>37</td><td>53</td><td>132,000</td></tr>
+            <tr><td>39</td><td>Audi</td><td>1909</td><td>1570</td><td>30</td><td>47</td><td>84,000</td></tr>
+            <tr><td>40</td><td>Mercedes</td><td>1926</td><td>2120</td><td>44</td><td>62</td><td>176,500</td></tr>
+            <tr><td>41</td><td>BMW</td><td>1916</td><td>2280</td><td>35</td><td>51</td><td>130,000</td></tr>
+            <tr><td>42</td><td>Audi</td><td>1909</td><td>1530</td><td>32</td><td>50</td><td>82,500</td></tr>
+            <tr><td>43</td><td>Mercedes</td><td>1926</td><td>2100</td><td>40</td><td>58</td><td>173,500</td></tr>
+            <tr><td>44</td><td>BMW</td><td>1916</td><td>2400</td><td>38</td><td>56</td><td>135,000</td></tr>
+            <tr><td>45</td><td>Audi</td><td>1909</td><td>1590</td><td>31</td><td>48</td><td>87,000</td></tr>
+            <tr><td>46</td><td>Mercedes</td><td>1926</td><td>2150</td><td>41</td><td>60</td><td>176,000</td></tr>
+            <tr><td>47</td><td>BMW</td><td>1916</td><td>2350</td><td>36</td><td>53</td><td>133,000</td></tr>
+            <tr><td>48</td><td>Audi</td><td>1909</td><td>1550</td><td>30</td><td>47</td><td>85,000</td></tr>
+            <tr><td>49</td><td>Mercedes</td><td>1926</td><td>2070</td><td>43</td><td>59</td><td>172,500</td></tr>
+            <tr><td>50</td><td>BMW</td><td>1916</td><td>2310</td><td>37</td><td>52</td><td>130,500</td></tr>
+        </tbody>
+    </table>
+    
+    <p><a href="lab2.html">Назад</a></p>
+</body>
+</html>
