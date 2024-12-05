@@ -1,0 +1,43 @@
+.content {
+	margin: auto;
+	background: rgb(154, 241, 154);
+	overflow: hidden;
+    position: relative;
+}
+
+.block {
+	padding: 10px;
+	background: white;
+	margin: 15px;
+	float: left;
+	width: 300px;
+	height: 100px;
+    position: relative;
+}
+
+.lang {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    float: right
+}
+
+span {
+	display: inline-block;
+	min-width: 80px;
+	margin: 5px;
+	padding: 6px;
+	font-size: 20px;
+	background: rgb(22, 50, 22);
+	color: white;	
+}
+
+.description {
+    text-align: left;
+    font-size: 16px;
+    color: black;
+    margin-top: 10px;
+	text-align: justify;
+	width: 150px;
+	height: 100px;
+}

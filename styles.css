@@ -1,0 +1,190 @@
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    border: 1px solid grey;
+}
+
+.header {
+    background-color: grey;
+    padding: 80px;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+}
+
+.menu {
+    display: flex; 
+    flex-wrap: wrap; 
+    background-color: grey;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+}
+
+/* Основные стили */
+.main {
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.large-card {
+    flex: 1 1 70%;
+}
+
+.small-card {
+    flex: 1 1 25%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f0f8ff;
+    padding: 15px;
+}
+
+.card-image {
+    background: #b0e0e6;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .large-card,
+    .small-card {
+        flex: 1 1 100%;
+    }
+}
+
+
+.menu-item {
+    display: flex; 
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    background-color: grey;
+    text-align: center; 
+    vertical-align: middle; 
+}
+
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 25%;
+    max-width: 25%;
+    margin: 10px;
+    border: 1px solid grey;
+    background-color: #f9f9f9;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    background-color: grey;
+}
+
+.card-title {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.card-content {
+    font-size: 15px;
+    color: grey;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.footer-card {
+    flex: 1 1 30%;
+    max-width: 30%;
+    margin: 10px;
+    background-color: snow;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.footer-card img {
+    width: 100%;
+    height: 200px;
+    background-color: LightSkyBlue;
+}
+
+.footer-card-title {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Адаптивная верстка для маленьких экранов */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Скрываем меню */
+    }
+
+    .main-content {
+        flex-direction: column; /* Перестраиваем в колонку */
+    }
+
+    .card {
+        flex: 1 1 100%; /* Полная ширина */
+        max-width: 100%;
+    }
+
+    .footer {
+        flex-direction: column; /* Перестраиваем в колонку */
+    }
+
+    .footer-card {
+        flex: 1 1 100%; /* Полная ширина */
+        max-width: 100%;
+    }
+}
